@@ -13,7 +13,7 @@ function ManageEmp() {
 
   //Similar to componentDidMount and componentDidUpdate
   useEffect(() => {
-    axios.get('http://localhost:4500/emp')
+    axios.get('https://gmitenewsbackend.herokuapp.com/emp')
       .then(response => {
         console.log(response.data)
         setEmpList(response.data);
@@ -47,7 +47,7 @@ function ManageEmp() {
     var tempemplist = [...emplist]; // make a new copy of array instead of mutating the same array directly. 
     let removerow = tempemplist.splice(index, 1);
     console.log(removerow[0].empemail)
-    axios.delete('http://localhost:4500/emp/remove/' + removerow[0].empemail)
+    axios.delete('https://gmitenewsbackend.herokuapp.com/emp/remove/' + removerow[0].empemail)
       .then(res => {
         console.log(res.data)
         setMessage('SUCCESSFULLY DELETED')
@@ -74,24 +74,24 @@ function ManageEmp() {
         <br />
         <h3 align="center">USER DETAILS</h3>
         <b style={{ color: "red" }}>{msg}</b>
-        <Container style={{overflowX:'auto'}}>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Mobile</th>
-              {/* <th>DOB</th>
+        <Container style={{ overflowX: 'auto' }}>
+          <Table striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                {/* <th>DOB</th>
               <th>Gender</th>
               <th>Country</th>
               <th>Address</th> */}
-            </tr>
-          </thead>
+              </tr>
+            </thead>
 
-          <tbody>
-            {viewEmpList()}
-          </tbody>
-        </Table>
+            <tbody>
+              {viewEmpList()}
+            </tbody>
+          </Table>
         </Container>
       </div>
     )

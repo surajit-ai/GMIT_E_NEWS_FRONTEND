@@ -31,7 +31,7 @@ function UpdateProfile(props) {
             // empaddress: eaddress
         }
 
-        axios.put('http://localhost:4500/emp/update', empinfo)
+        axios.put('https://gmitenewsbackend.herokuapp.com/emp/update', empinfo)
             .then(res => {
                 console.log(res.data)
                 setMessage('PROFILE UPDATED')
@@ -51,7 +51,7 @@ function UpdateProfile(props) {
         let empemailid = sessionStorage.getItem('useremail')
         if (empemailid == null)
             empemailid = props.email
-        axios.get('http://localhost:4500/emp/search/' + empemailid)
+        axios.get('https://gmitenewsbackend.herokuapp.com/emp/search/' + empemailid)
             .then(response => {
                 console.log(response.data)
                 const { empname, empemail, empmobile, emppass } = response.data[0]
@@ -68,47 +68,47 @@ function UpdateProfile(props) {
 
     return (
         <>
-        <Navbars />
-       <center> <div class="col-lg-6 col-md-8 reg-box">
-            
-            <br />
-            <h3 class="col-lg-12 login-title">PROFILE UPDATE</h3>
-            <b style={{ color: "red" }}> {msg}</b>
-            <form onSubmit={handleSubmit}>
-                <label>NAME: </label> <br />
-                <input type="text" value={ename}
-                    onChange={onChangeEmpName} placeholder="Enter Name"
-                    readOnly />
-                <br /><br />
+            <Navbars />
+            <center> <div class="col-lg-6 col-md-8 reg-box">
 
-                <label>EMAIL: </label> <br />
-                <input type="email" value={eemail}
-                    onChange={onChangeEmpEmail} placeholder="Enter Email"
-                    readOnly />
-                <br /><br />
+                <br />
+                <h3 class="col-lg-12 login-title">PROFILE UPDATE</h3>
+                <b style={{ color: "red" }}> {msg}</b>
+                <form onSubmit={handleSubmit}>
+                    <label>NAME: </label> <br />
+                    <input type="text" value={ename}
+                        onChange={onChangeEmpName} placeholder="Enter Name"
+                        readOnly />
+                    <br /><br />
 
-                <label>MOBILE: </label> <br />
-                <input type="number" value={emobile}
-                    onChange={onChangeEmpMobile} placeholder="Enter Mobile No"
-                    required />
-                <br /><br />
+                    <label>EMAIL: </label> <br />
+                    <input type="email" value={eemail}
+                        onChange={onChangeEmpEmail} placeholder="Enter Email"
+                        readOnly />
+                    <br /><br />
 
-                <label>PASSWORD: </label> <br />
-                <input type="password" value={epass}
-                    onChange={onChangeEmpPass} placeholder="Enter Password"
-                    required />
-                <br /><br />
+                    <label>MOBILE: </label> <br />
+                    <input type="number" value={emobile}
+                        onChange={onChangeEmpMobile} placeholder="Enter Mobile No"
+                        required />
+                    <br /><br />
 
-                {/* <label>ADDRESS: </label> <br />
+                    <label>PASSWORD: </label> <br />
+                    <input type="password" value={epass}
+                        onChange={onChangeEmpPass} placeholder="Enter Password"
+                        required />
+                    <br /><br />
+
+                    {/* <label>ADDRESS: </label> <br />
                 <textarea value={eaddress}
                     onChange={onChangeEmpAddress} rows="3" >
                 </textarea>
                 <br /><br /> */}
 
-                <input type="submit" value="UPDATE PROFILE" className="btn btn-success" />
+                    <input type="submit" value="UPDATE PROFILE" className="btn btn-success" />
 
-            </form>
-        </div></center>
+                </form>
+            </div></center>
         </>
     )
 }

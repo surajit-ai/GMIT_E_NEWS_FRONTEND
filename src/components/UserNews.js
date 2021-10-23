@@ -12,7 +12,7 @@ function Displayall() {
 
   //Similar to componentDidMount and componentDidUpdate
   useEffect(() => {
-    axios.get('http://localhost:4500/news')
+    axios.get('https://gmitenewsbackend.herokuapp.com/news')
       .then(response => {
         console.log(response.data)
         setEmpList(response.data);
@@ -41,7 +41,7 @@ function Displayall() {
           </tr>
         );
       }
-      else if (currentrow.status ==="1") {
+      else if (currentrow.status === "1") {
         return (
           <tr key={index}>
             {/* <td>{currentrow.nname}</td> */}
@@ -56,7 +56,7 @@ function Displayall() {
         );
       }
 
-      else if (currentrow.status ==="-1") {
+      else if (currentrow.status === "-1") {
         return (
           <tr key={index}>
             {/* <td>{currentrow.nname}</td> */}
@@ -79,7 +79,7 @@ function Displayall() {
     let re = templist.splice(index, 1);
     // console.log("hello")
     // console.log(templist)
-    axios.delete('http://localhost:4500/news/remove/' + re[0]._id)
+    axios.delete('https://gmitenewsbackend.herokuapp.com/news/remove/' + re[0]._id)
       .then(res => {
         console.log(res.data)
         setMsg("News Deleted Succesfully.");
@@ -92,7 +92,7 @@ function Displayall() {
   }
   function approveNews(index) {
     var temp = [...emplist];
-    axios.put('http://localhost:4500/news/newsapprove/' + temp[index]._id)
+    axios.put('https://gmitenewsbackend.herokuapp.com/news/newsapprove/' + temp[index]._id)
       .then(response => {
         console.log(response)
         temp[index].status = "1"
@@ -104,7 +104,7 @@ function Displayall() {
   }
   function rejectNews(index) {
     var temp = [...emplist];
-    axios.put('http://localhost:4500/news/newsreject/' + temp[index]._id)
+    axios.put('https://gmitenewsbackend.herokuapp.com/news/newsreject/' + temp[index]._id)
       .then(response => {
         // console.log(response)
         temp[index].status = "-1"

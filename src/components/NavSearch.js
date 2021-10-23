@@ -20,7 +20,7 @@ function NavSearch(props) {
     const handleSubmit = (evt) => {
         evt.preventDefault();
 
-        axios.get('http://localhost:4500/news/search/' + ncat)
+        axios.get('https://gmitenewsbackend.herokuapp.com/news/search/' + ncat)
             .then(res => {
                 setResult(res.data)
                 // setMsg("Search results for "+ncat)

@@ -17,7 +17,7 @@ function Delete() {
     //console.log(`Form submitted:`);
     //console.log(`EMAIL ID: ${eemail}`);
 
-    axios.delete('http://localhost:4500/emp/remove/' + eemail)
+    axios.delete('https://gmitenewsbackend.herokuapp.com/emp/remove/' + eemail)
       .then(res => {
         console.log(res.data)
         setMessage('SUCCESSFULLY DELETED')
@@ -32,23 +32,23 @@ function Delete() {
 
   return (
     <>
-    <Navbar2/>
-    <center><div class="col-lg-6 col-md-8 reg-b">
-      {/* <NavigationBar /> */}
-      
-      <br />
-      <h3 class="col-lg-12 login-title">DELETE USR</h3>
-      <b style={{ color: "red" }}>{msg}</b>
-      <form onSubmit={handleSubmit}>
-        <input type="email" value={eemail}
-          onChange={onChangeEmpEmail}
-          placeholder="EMAIL ID"
-          required />
+      <Navbar2 />
+      <center><div class="col-lg-6 col-md-8 reg-b">
+        {/* <NavigationBar /> */}
+
         <br />
-        <br />
-        <input type="submit" value="DELETE USER" className="btn btn-danger" />
-      </form>
-    </div></center>
+        <h3 class="col-lg-12 login-title">DELETE USR</h3>
+        <b style={{ color: "red" }}>{msg}</b>
+        <form onSubmit={handleSubmit}>
+          <input type="email" value={eemail}
+            onChange={onChangeEmpEmail}
+            placeholder="EMAIL ID"
+            required />
+          <br />
+          <br />
+          <input type="submit" value="DELETE USER" className="btn btn-danger" />
+        </form>
+      </div></center>
     </>
   )
 }

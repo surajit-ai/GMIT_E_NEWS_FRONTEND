@@ -22,7 +22,7 @@ function Homeo(props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:4500/news/home')
+    axios.get('https://gmitenewsbackend.herokuapp.com/news/home')
       .then(response => {
         setNewsList(response.data);
       })

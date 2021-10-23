@@ -8,7 +8,7 @@ function AboutNews() {
     const [newslist, setNewsList] = useState([]);
     useEffect(() => {
         let nid = localStorage.getItem('readmore');
-        axios.get('http://localhost:4500/news/readmore/' + nid)
+        axios.get('https://gmitenewsbackend.herokuapp.com/news/readmore/' + nid)
             .then(response => {
                 setNewsList(response.data);
             })
@@ -22,17 +22,17 @@ function AboutNews() {
         return newslist.map((currentrow, index) => {
             return (
                 <Col key={index} style={{ width: "" }}>
-                <Card style={{ width: '1000px', cursor: 'pointer', marginTop: '20px',marginLeft:"20px"}}>
-   
-                  <Card.Img variant="top" src={currentrow.nimg} style={{maxHeight: "500px" }}/>
-                  <small className="text-muted"> {currentrow.ncat}</small>{" "} by <b>{currentrow.authorname}</b>
-                  <SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{currentrow.createdAt}</SimpleDateTime>
-                  <Card.Body>
-                    <Card.Title style={{ }}>{currentrow.ntitle}.</Card.Title>
-                    <Card.Text style={{ }}>{currentrow.ndesp}</Card.Text>
-                  </Card.Body>
-                </Card>    
-               </Col>
+                    <Card style={{ width: '1000px', cursor: 'pointer', marginTop: '20px', marginLeft: "20px" }}>
+
+                        <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "500px" }} />
+                        <small className="text-muted"> {currentrow.ncat}</small>{" "} by <b>{currentrow.authorname}</b>
+                        <SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{currentrow.createdAt}</SimpleDateTime>
+                        <Card.Body>
+                            <Card.Title style={{}}>{currentrow.ntitle}.</Card.Title>
+                            <Card.Text style={{}}>{currentrow.ndesp}</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
             )
         })
     }
@@ -41,7 +41,7 @@ function AboutNews() {
         <>
             <Navbars />
             <br /><br />
-            <Container style={{overflowX:'auto'}}>
+            <Container style={{ overflowX: 'auto' }}>
                 {viewNews()}
 
             </Container>

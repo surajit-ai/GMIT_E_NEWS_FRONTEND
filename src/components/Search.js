@@ -18,7 +18,7 @@ function Search() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    axios.get('http://localhost:4500/emp/search/' + eemail)
+    axios.get('https://gmitenewsbackend.herokuapp.com/emp/search/' + eemail)
       .then(res => {
         console.log(res.data)
         setEmpList(res.data)
@@ -53,7 +53,7 @@ function Search() {
     var tempemplist = [...emplist]; // make a new copy of array instead of mutating the same array directly. 
     let removerow = tempemplist.splice(index, 1);
     console.log(removerow[0].empemail)
-    axios.delete('http://localhost:4500/emp/remove/' + removerow[0].empemail)
+    axios.delete('https://gmitenewsbackend.herokuapp.com/emp/remove/' + removerow[0].empemail)
       .then(res => {
         console.log(res.data)
         setMessage('SUCCESSFULLY DELETED')

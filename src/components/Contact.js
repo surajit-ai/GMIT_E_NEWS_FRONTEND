@@ -33,7 +33,7 @@ function Contact() {
             umessage: emessage,
         }
 
-        axios.post('http://localhost:4500/usercontact/contact', empinfo)
+        axios.post('https://gmitenewsbackend.herokuapp.com/usercontact/contact', empinfo)
             .then(res => {
                 console.log(res.data)
                 setMessage('Message Send')

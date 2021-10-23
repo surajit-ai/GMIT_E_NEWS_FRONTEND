@@ -11,7 +11,7 @@ function Displayall() {
 
   //Similar to componentDidMount and componentDidUpdate
   useEffect(() => {
-    axios.get('http://localhost:4500/emp')
+    axios.get('https://gmitenewsbackend.herokuapp.com/emp')
       .then(response => {
         console.log(response.data)
         setEmpList(response.data);
@@ -28,7 +28,7 @@ function Displayall() {
           <td>{currentrow.empname}</td>
           <td>{currentrow.empemail}</td>
           <td>{currentrow.empmobile}</td>
-          <td><img src={currentrow.empimg} width={250}/></td>
+          <td><img src={currentrow.empimg} width={250} /></td>
           {/* <td>{currentrow.empgender}</td>
           <td>{currentrow.empcountry}</td>
           <td>{currentrow.empaddress}</td>  */}
@@ -39,7 +39,7 @@ function Displayall() {
   return (
     <div>
       {/* <NavigationBar /> */}
-      <Navbars/>
+      <Navbars />
       <br />
       <h3 align="center">ALL USER DETAILS</h3>
       {/* <table border="1" align="center" striped bordered hover variant="dark">
@@ -48,27 +48,27 @@ function Displayall() {
             <th>Name</th>
             <th>Email</th>
             <th>Mobile</th> */}
-            {/* <th>DOB</th>
+      {/* <th>DOB</th>
             <th>Gender</th>
             <th>Country</th>
             <th>Address</th> */}
-          {/* </tr>
+      {/* </tr>
         </thead> */}
-        <Container style={{overflowX:'auto'}}>
+      <Container style={{ overflowX: 'auto' }}>
         <Table striped bordered hover variant="dark">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Mobile</th>
-      <th>Img</th>
-    </tr>
-  </thead>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Img</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          {viewEmpList()}
-        </tbody>
-      </Table>
+          <tbody>
+            {viewEmpList()}
+          </tbody>
+        </Table>
       </Container>
     </div>
   )
