@@ -16,7 +16,7 @@ function Admin(props) {
     console.log(`EMAIL: ${adminuserid}`);
     console.log(`PASS: ${adminpassword}`);
 
-    if ((adminuserid === "admin") && (adminpassword === "admin")) {
+    if ((adminuserid === "admin") && (adminpassword === "administrator")) {
       sessionStorage.setItem("Key_Veriable", 'ADMIN')
       setMessage('WELCOME ADMIN')
       props.history.push('/Admina')
