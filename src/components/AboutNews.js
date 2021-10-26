@@ -22,7 +22,7 @@ function AboutNews() {
         return newslist.map((currentrow, index) => {
             return (
                 <Col key={index} style={{ width: "" }}>
-                    <Card style={{ width: '1000px', cursor: 'pointer', marginTop: '20px', marginLeft: "20px" }}>
+                    <Card style={{ width: '', cursor: 'pointer', marginTop: '20px', marginLeft: "20px" }}>
 
                         <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "500px" }} />
                         <small className="text-muted"> {currentrow.ncat}</small>{" "} by <b>{currentrow.authorname}</b>
@@ -41,7 +41,7 @@ function AboutNews() {
         <>
             <Navbars />
             <br /><br />
-            <Container style={{ overflowX: 'auto' }}>
+            <Container xs={1}>
                 {viewNews()}
 
             </Container>
