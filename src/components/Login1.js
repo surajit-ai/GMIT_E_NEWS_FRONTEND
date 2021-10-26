@@ -66,14 +66,14 @@ function Login1(props) {
                     <div class="form-group">
                       <label class="form-control-label"></label>
                       <input type="email" className="form-control"
-                        placeholder="Enter Password"
+                        placeholder="Enter Email"
                         value={eemail}
                         onChange={onChangeEmpEmail}
                         required />
                     </div>
                     <div class="form-group">
                       <label class="form-control-label"></label>
-                      <input type="pass" className="form-control" value={epass}
+                      <input type="password" className="form-control" value={epass}
                         placeholder="Enter Password"
                         onChange={onChangeEmpPass}
                         required />
