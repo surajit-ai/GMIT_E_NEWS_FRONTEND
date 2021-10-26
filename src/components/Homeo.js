@@ -33,8 +33,8 @@ function Homeo(props) {
   function viewNews() {
     return newslist.map((currentrow, index) => {
       return (
-        <Col key={index} style={{ width: "30rem" }} >
-          <Card style={{ width: '550px', cursor: 'pointer', marginTop: '20px' }}>
+        <Col key={index} style={{ width: "" }} >
+          <Card style={{ width: '', cursor: 'pointer', marginTop: '20px' }}>
 
             <Card.Img variant="top" src={currentrow.nimg} />
             <small className="text-muted"> {currentrow.ncat}</small>
@@ -63,8 +63,8 @@ function Homeo(props) {
       <a href="https://www.facebook.com/gargimemorial"><button className="btn btn-danger  float-right" type="submit">FOLLOW</button></a>
       </div> */}
       <br />
-      <Container style={{ overflowX: 'auto' }}>
-        <Row >
+      <Container >
+        <Row xs={1} md={2} className="g-6">
           {viewNews()}
         </Row>
 
