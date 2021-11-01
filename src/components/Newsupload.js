@@ -108,9 +108,9 @@ let Newsupload = () => {
         <Card.Img src={img1} alt="Card image" style={{ backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '850px' }} />
         <Card.ImgOverlay>
 
-          <div >
+          <center> <div class="col-lg-6 col-md-8">
 
-            <center> <form style={{ width: '50%', textAlign: 'center' }} onSubmit={handleSubmit} >
+            <form onSubmit={handleSubmit} >
               <h2 className="h" style={{ marginTop: '20px', marginLeft: 'px' }}>News Upload</h2>
               <h4 style={{ color: "brown" }}> {msg}</h4>
               <label></label>
@@ -130,6 +130,8 @@ let Newsupload = () => {
                   <option value="ENTERTENMENT">Entertenment</option>
                   <option value="POLITICS">Politics</option>
                   <option value="EDUCATION">Education</option>
+                  <option value="WORLD NEWS">World News</option>
+                  <option value="ECONOMICS">Economics</option>
                 </select>
                 <br />
               </div>
@@ -137,21 +139,21 @@ let Newsupload = () => {
                 <input type="text" className="form-control" placeholder="News Title" name="news" value={etitle}
                   onChange={onChangeEmpTitle} required />
               </div>
-
-              <div className="">
-                <label></label>
-                <textarea rows="9" type="text" className="form-control" placeholder="News Description" name="description" value={edesp}
-                  onChange={onChangeEmpDesp} required></textarea>
-              </div>
-
               <div className="form-group">
                 <label></label>
                 <input type="file" className="form-control-file" name="img"
                   onChange={handleImage} required />
               </div>
 
+              <div className="">
+                <label></label>
+                <textarea rows="9" type="text" className="form-control" placeholder="News Description" name="description" value={edesp}
+                  onChange={onChangeEmpDesp} required></textarea>
+              </div>
+              <br />
               <button type="submit" className="btn btn-dark btn-block">Submit</button>
-            </form></center></div>
+            </form></div>
+          </center>
         </Card.ImgOverlay>
       </Card>
       <Footer1 />
