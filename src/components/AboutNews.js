@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Col, Container, Row, Button, Card, Tabs, Tab, CardGroup } from 'react-bootstrap';
 import Navbars from './Navbars';
 import SimpleDateTime from 'react-simple-timestamp-to-date';
+import Marquee from "react-fast-marquee";
 
 function AboutNews() {
     const [newslist, setNewsList] = useState([]);
@@ -22,6 +23,9 @@ function AboutNews() {
         return newslist.map((currentrow, index) => {
             return (
                 <Col key={index} style={{ width: "" }}>
+                    <Marquee style={{}}>
+                        <b style={{ color: 'red', }} class='h5'>{currentrow.ntitle}</b>
+                    </Marquee>
                     <Card style={{ width: '', cursor: 'pointer', marginTop: '20px', marginLeft: "20px" }}>
 
                         <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "500px" }} />
