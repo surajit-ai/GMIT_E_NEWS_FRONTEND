@@ -68,7 +68,7 @@ import SRIcon from './img/icons8-search.svg';
              <Nav.Link as={Link} to = "/Newsupload">NEWSUPLOAD</Nav.Link>
              <Nav.Link as={Link} to = "/UserShow">NEWS</Nav.Link>
             </Nav>
-            <Nav style ={{position:'absolute',right:8}}>
+            <Nav style ={{marginLeft:'65%'}}>
             <NavDropdown title={name} id="collasible-nav-dropdown" >
               <NavDropdown.Item as={Link} to = "#">VIEW PROFILE</NavDropdown.Item>
               <NavDropdown.Item as={Link} to ="/updateprofile">UPDATE PROFILE</NavDropdown.Item>
