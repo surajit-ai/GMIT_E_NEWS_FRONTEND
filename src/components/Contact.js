@@ -52,7 +52,7 @@ function Contact() {
             <Navbars />
             <br />
             <Container>
-                <Row>
+                <Row xs={1} md={2} className="g-6">
                     <Col>
                         <div class="card-header bg-primary text-white"><i class="fa fa-envelope"></i> Contact us.</div>
                         <Card>
