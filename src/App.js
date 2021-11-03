@@ -36,6 +36,7 @@ import Homeo from './components/Homeo';
 import AboutNews from './components/AboutNews';
 import NavSearch from './components/NavSearch';
 import Caro from './components/Carousel'
+import LiveNews from './components/LiveNews';
 
 
 
@@ -77,7 +78,7 @@ const App = () =>{
    <Route path="/AboutNews" component={AboutNews} />
    <Route path="/NavSearch" component={NavSearch} />
    <Route path="/Carousel" component={Caro} />
-   
+   <Route path="/LiveNews" component={LiveNews} />
    
   
    

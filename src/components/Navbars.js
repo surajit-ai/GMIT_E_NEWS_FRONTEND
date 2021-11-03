@@ -14,6 +14,7 @@ import React from 'react';
   import { Container } from 'react-bootstrap';
 // import logo from './logo.svg';
 import SRIcon from './img/icons8-search.svg';
+import PIcon from './img/Play.svg';
 
  
  
@@ -101,7 +102,8 @@ import SRIcon from './img/icons8-search.svg';
           <NavDropdown.Item as={Link} to="/LoginPage">LOG IN</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/reg">REGISTATION</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link as={Link} to="/NavSearch"><img src={SRIcon} width={20}/> </Nav.Link>
+        <Nav.Link as={Link} to="/LiveNews"><img src={PIcon} width={30} />LIVE</Nav.Link>
+        <Nav.Link as={Link} to="/NavSearch"><img src={SRIcon} width={30}/> </Nav.Link>
       </Nav>
     </Navbar.Collapse>
 </Navbar>
