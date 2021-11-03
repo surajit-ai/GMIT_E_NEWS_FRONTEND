@@ -93,9 +93,8 @@ import PIcon from './img/Play.svg';
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link as={Link} to="/">HOME</Nav.Link>
-        <Nav.Link as={Link} to = "/Gallery">WEB GALLERY</Nav.Link>
-        <Nav.Link as={Link} to="/contact">CONTECT US</Nav.Link>
+        <Nav.Link as={Link} to="/">NEWS</Nav.Link>
+        <Nav.Link as={Link} to="/contact">CONTACT US</Nav.Link>
       </Nav>
       <Nav>
          <NavDropdown title="SIGN IN" id="basic-nav-dropdown">

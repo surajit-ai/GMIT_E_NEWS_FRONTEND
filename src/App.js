@@ -9,7 +9,7 @@ import {Route, Switch} from 'react-router-dom';
 
 // import LoginPage from "./LoginPage"
 // import SignUp from "./SignUp"
-import Gallery from './components/Gallery';
+// import Gallery from './components/Gallery';
 import AboutPage from './components/AboutPage'
 import Search from './components/Search';
 // import Home04 from './Home04';
@@ -51,7 +51,7 @@ const App = () =>{
 <Switch>
   <Route exact path="/" component={Homeo} />
   {/* <Route exact path="/" component={Home} /> */}
-  <Route exact path="/Gallery" component={Gallery} />
+  {/* <Route exact path="/Gallery" component={Gallery} /> */}
   <Route exact path="/LoginPage" component={Login1} />
   {/* <Route exact path="/SignUp" component={SignUp} /> */}
   <Route exact path="/About" component={AboutPage} />
