@@ -10,7 +10,7 @@ import {
   Link
 } from "react-router-dom";
 
-function UserAfterLogin() {
+function UserAfterLogin(props) {
   // let authuser = sessionStorage.getItem('Key_Veriable')
   // console.log(authuser)
   // if (authuser == null) {
