@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Redirect } from "react-router-dom";
+import Navbars from './Navbars';
 import axios from 'axios';
 import { Col, Container, Row, Button, Card, Tabs, Tab, CardGroup, Carousel } from 'react-bootstrap';
 import Caro from "./Carousel";
-import Navbars from './Navbars';
-import Footer1 from './Footer1';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 
-function UserAfterLogin(props) {
+function UserAfterLogin() {
   // let authuser = sessionStorage.getItem('Key_Veriable')
   // console.log(authuser)
   // if (authuser == null) {
@@ -20,7 +24,7 @@ function UserAfterLogin(props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:4500/news/home')
+    axios.get('https://gmitenewsbackend.herokuapp.com/news/home')
       .then(response => {
         setNewsList(response.data);
       })
@@ -34,7 +38,7 @@ function UserAfterLogin(props) {
         <Col key={index} style={{ width: "" }} >
           <Card style={{ width: '', cursor: 'pointer', marginTop: '20px' }}>
 
-            <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "300px" }} />
+            <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "300px" }}  />
             <small className="text-muted"> {currentrow.ncat}</small>
             <Card.Body>
               <Card.Title style={{ maxHeight: "26px", marginTop: "5px", overflow: "hidden" }}>{currentrow.ntitle}.</Card.Title>
@@ -43,7 +47,6 @@ function UserAfterLogin(props) {
             </Card.Body>
           </Card>
         </Col>
-
       )
     })
   }
@@ -62,21 +65,15 @@ function UserAfterLogin(props) {
     return (
       <div>
         <Navbars />
-        <br />
-        <center><h3 className="f" style={{ marginLeft: 'px' }}>WELCOME {name}</h3></center>
-        <Caro />
-        <br />
-        <Container>
-          <Row xs={1} md={2} className="g-6" >
-            {viewNews()}
-          </Row>
+       <center> <h3>WELCOME {name}</h3></center>
+       <Caro />
+       <br />
+      <Container >
+        <Row xs={1} md={2} className="g-6">
+          {viewNews()}
+        </Row>
 
-        </Container>
-        <hr class="new2"></hr>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <Footer1 />
+      </Container>
       </div>
     )
   }
