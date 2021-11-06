@@ -1,38 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import img3 from './img/gmit1.jpg'
+import img4 from './img/caro.jpeg'
+import img5 from './img/caro2.jpeg'
 
 function Caro(){
     return(
         <div>
-        <Carousel variant="dark">
+        <Carousel variant="dark" style={{ width: "94%" }}>
   <Carousel.Item>
     <img
       className="d-block w-100"
       src={img3}
       alt="First slide"
+      style={{ maxHeight: "400px" }}
     />
     <Carousel.Caption>
-      <h3>Gargi Memorial Institute of Technology</h3>
-      <p> The college is affiliated to Maulana Abul Kalam Azad University of Technology(MAKAUT).</p>
+      <h5>Education</h5>
+      <p> CBSE Puts Out All-new Optical Mark Recognition Sheets For MCQ First-term Exams;</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={img3}
+      src={img4}
       alt="Second slide"
+      style={{ maxHeight: "400px" }}
     />
     <Carousel.Caption>
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h5>Gov.</h5>
+      <p>Venkaiah Naidu Affirms Women Empowerment 'essential For Accelerated National Progress'</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={img3}
+      src={img5}
       alt="Third slide"
+      style={{ maxHeight: "400px" }}
     />
     <Carousel.Caption>
       <h5>Third slide label</h5>

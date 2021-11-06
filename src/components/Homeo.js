@@ -36,7 +36,7 @@ function Homeo(props) {
         <Col key={index} style={{ width: "" }} >
           <Card style={{ width: '', cursor: 'pointer', marginTop: '20px' }}>
 
-            <Card.Img variant="top" src={currentrow.nimg} />
+            <Card.Img variant="top" src={currentrow.nimg} style={{ maxHeight: "300px" }}  />
             <small className="text-muted"> {currentrow.ncat}</small>
             <Card.Body>
               <Card.Title style={{ maxHeight: "26px", marginTop: "5px", overflow: "hidden" }}>{currentrow.ntitle}.</Card.Title>
