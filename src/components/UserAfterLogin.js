@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Footer1 from "./Footer1"
 
 function UserAfterLogin(props) {
   // let authuser = sessionStorage.getItem('Key_Veriable')
@@ -65,7 +66,7 @@ function UserAfterLogin(props) {
     return (
       <div>
         <Navbars />
-       <center> <h3>WELCOME {name}</h3></center>
+       <center> <h3 className="f">WELCOME {name}</h3></center>
        <Caro />
        <br />
       <Container >
@@ -74,6 +75,10 @@ function UserAfterLogin(props) {
         </Row>
 
       </Container>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <Footer1 />
       </div>
     )
   }

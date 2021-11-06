@@ -120,7 +120,7 @@ function Displayall() {
       {/* <NavigationBar /> */}
       <Navbars />
       <br />
-      <h3 align="center">ALL USER DETAILS</h3>
+      <h3 align="center">ALL USER NEWS</h3>
       {/* <table border="1" align="center" striped bordered hover variant="dark">
         <thead>
           <tr>
