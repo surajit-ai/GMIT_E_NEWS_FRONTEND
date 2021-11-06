@@ -110,6 +110,9 @@ function Registration() {
                     <br /><br />
                     <div>
                         <input type="submit" class="btn btn-outline-primary" value="REGISTER" />
+                        <p className="text-right">
+                            Already registered <Link as={Link} to="LoginPage">sign in?</Link>
+                        </p>
                     </div>
                 </form>
 
